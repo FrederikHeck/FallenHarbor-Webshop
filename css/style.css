@@ -1,0 +1,83 @@
+body {
+    background-color: #00008B;
+    background-image: url("../img/background1.png");
+    background-size: cover;
+
+    text-align: center;
+    font-family: Comic Sans MS;
+    letter-spacing: 1px;
+
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+h1 {
+    color: white;
+    font-size: 40px;
+    text-decoration: none;
+}
+p {
+    font-size: 14px;
+    font-family: sans-serif;
+}
+
+a {
+    top: 0px;
+    transition: top 1s linear;
+    color: white;
+    text-decoration: none;
+}
+
+section {
+    padding: 1.2%;
+}
+
+a:hover {
+
+}
+
+
+footer {
+    /* center vertically */
+    display: -webkit-flexbox;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background-color: rgba(255, 255, 255, .03);
+}
+
+a.footer {
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+
+main {
+    padding: 20px;
+}
+
+img.heading-font{
+    height: 7vh;
+}
+
+img.logo {
+    width: 20%;
+}
+img.diver {
+    width: 28vh;
+}
+
+iframe.homevideo {
+    width: 115vh;
+    height: 55vh;
+    opacity: 0.9;
+    border-radius: 25px;
+}
