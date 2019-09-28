@@ -5,4 +5,5 @@
     <link rel="stylesheet" type="text/css" href="css/stylereset.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
     <link rel="stylesheet" type="text/css" href="css/nav.css" />
+    <?php require("init.php") ?>
 </head>

@@ -2,7 +2,7 @@
 <html>
     <?php require("head.php")?>
     <body>
-       <?php require("nav.php") ?>
+       <?php $thissite="home"; require("nav.php") ?>
        <main>
            <a href="home.php"><img class="heading-font" src="img/fallenharbor.png" alt="logo" /></a>
            <section><iframe class="homevideo" src="https://www.youtube.com/embed/cxxIN6fyj58"></iframe></section>
