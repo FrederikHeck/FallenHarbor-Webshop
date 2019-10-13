@@ -24,8 +24,15 @@ li.nav {
     padding: 20px 20px 20px 20px;
 }
 
+li.shopnav {
+    padding: 0px 20px;
+}
 #thissite {
     color: green;
+}
+
+#thisShopSite {
+    color: red;
 }
 
 li.navPCT {
@@ -73,4 +80,6 @@ div.nCR2{
 
 img.home {
     width: 85px;
+    font-size: 32px;
+    font-weight: bold;
 }
