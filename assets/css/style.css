@@ -15,7 +15,15 @@ h1 {
     font-size: 40px;
     text-decoration: none;
 }
+
+h2 {
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+}
+
 p {
+    color: white;
     font-size: 14px;
     font-family: sans-serif;
 }
@@ -33,6 +41,11 @@ section {
 
 a:hover {
 
+}
+
+label {
+    display: block;
+    padding: 6px 0px;
 }
 
 

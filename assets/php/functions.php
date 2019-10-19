@@ -1,12 +1,12 @@
 <?php # class for functions and other util information
-    function echo_Anchor($class, $name, $idFlag=0){
+    function echo_Anchor($class, $name, $idFlag=0){ # for menu-links
         global $thissite;
         global $nav;
         global $dict;
         global $lng;
         global $site;
 
-        $href = $nav[$name];
+        $href = $nav[$name]; #href has to be in nav-Array
         $print = $dict[$name][$lng];
 
         if($idFlag===1 && $site === $name){ #only for submenue shopnav
@@ -41,7 +41,7 @@
         "home"=>"index.php?id=home&lng=$lng",
         "word"=>"index.php?id=word&lng=$lng",
         "shop"=>"index.php?id=musicshop&lng=$lng",
-        "you"=>"index.php?id=login&lng=$lng",
+        "you"=>"index.php?id=registration&lng=$lng",
         "merchshop"=>"index.php?id=merchshop&lng=$lng",
         "musicshop"=>"index.php?id=musicshop&lng=$lng",
     );
