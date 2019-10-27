@@ -5,4 +5,5 @@
     <link rel="stylesheet" type="text/css" href="assets/css/stylereset.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/nav.css" />
+    <script src="assets/js/jquery.js"></script>
 </head>

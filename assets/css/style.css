@@ -1,5 +1,5 @@
 body {
-    background-color: #00008B;
+    background-color: #004466;
     background-image: url("../img/background1.png");
     background-size: cover;
 
@@ -26,6 +26,7 @@ p {
     color: white;
     font-size: 14px;
     font-family: sans-serif;
+    padding: 4px;
 }
 
 a {
@@ -44,8 +45,8 @@ a:hover {
 }
 
 label {
-    display: block;
-    padding: 6px 0px;
+    color: white;
+    padding: 6px 6px;
 }
 
 
@@ -96,7 +97,17 @@ iframe.homevideo {
 }
 
 img.product {
-    width: 200px;
     height: 200px;
     padding: 20px;
+}
+
+.dialog {
+    color: black;
+    display: none;
+}
+
+mark {
+    display: none;
+    color: white;
+    background-color: inherit;
 }

@@ -119,5 +119,25 @@
             'de'=>'[Hafenpost] Bestellung Erfolgreich!',
             'en'=>'[Message from your Harbor] Order Complete!'
         ),
+        "boxConfirmTitle" => array(
+            'de'=>'Bestellung abschliessen',
+            'en'=>'Complete Order'
+        ),
+        "boxConfirm1" => array(
+            'de'=>'Ich habe die',
+            'en'=>"I have read the"
+        ),
+        "boxConfirm2" => array(
+            'de'=>'gelesen und bin damit einverstanden.',
+            'en'=>'and accept them.'
+        ),
+        "agb" => array(
+            'de'=>'AGBs',
+            'en'=>'standard form contracts'
+        ),
+        "yes" => array(
+            'de'=>'Ja',
+            'en'=>'Yes'
+        ),
     )
 ?>

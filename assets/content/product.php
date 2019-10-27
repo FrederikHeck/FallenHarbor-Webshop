@@ -24,9 +24,10 @@
                 }
             ?>
         </select>
-        <input type="submit" value=<?=$dict["buy"][$lng]?>></p>
 
         <!-- hidden values -->
         <input type="hidden" name="pid" value="<?=$pid?>">
         <input type="hidden" name="product_format_index" value="<?=$product_format_index?>">
+
+        <input type="submit" value=<?=$dict["buy"][$lng]?>>
     </form>

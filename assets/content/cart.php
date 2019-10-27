@@ -38,5 +38,13 @@
 
     <input type="hidden" name="product_format_index" value="<?=$product_format_index?>">
 
-    <input type="submit" value=<?=$dict["buy"][$lng]?>>
+    <div id="dialog" title="<?=$dict["boxConfirmTitle"][$lng]?>">
+      <p class="dialog"><?=$dict["boxConfirm1"][$lng]?>
+          <a href="<?="index.php?id=agb&lng=$lng"?>" target="_blank"><?=$dict["agb"][$lng]?></a>
+          <?=$dict["boxConfirm2"][$lng]?></p>
+      <input class="dialog" type="submit" value="<?=$dict["yes"][$lng]?>" onclick="submitForm()">
+    </div>
 </form>
+<button><?=$dict["buy"][$lng]?></button>
+
+<?php require(dirname(__DIR__)."\js\confirm_order.php")?>

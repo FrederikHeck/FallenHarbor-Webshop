@@ -1,4 +1,6 @@
 <?php require("assets/php/product_infos.php") ?>
+<script src="assets/js/validate.js"></script>
+
 <h1><?=$dict["you"][$lng]?></h1>
 <form action="<?="index.php?id=cart&lng=$lng";?>" method="post">
 
@@ -7,12 +9,18 @@
     <input type="hidden" name="product_format_index" value="<?=$product_format_index?>">
 
     <!--standard values-->
-    <label><?=$dict["firstname"][$lng]?></label>
-    <input type="text" name="firstname"/>
-    <label><?=$dict["lastname"][$lng]?></label>
-    <input type="text" name="lastname"/>
-    <label><?=$dict["email"][$lng]?></label>
-    <input type="email" name="email"/><br/>
+    <p id="firstname">
+        <label><?=$dict["firstname"][$lng]?></label><input type="text" name="firstname"/>
+        <mark>Please enter a name!</mark>
+    </p>
+    <p id="lastname">
+        <label><?=$dict["lastname"][$lng]?></label><input type="text" name="lastname"/>
+        <mark>Please enter a name!</mark>
+    </p>
+    <p id="email">
+        <label><?=$dict["email"][$lng]?></label><input type="email" name="email"/>
+        <mark>Please enter an email!</mark>
+    </p>
 
     <!--adress values-->
     <?php
@@ -25,25 +33,30 @@
         }
 
         if ($shipping === true){
-            $dict_placeholder = $dict["street"][$lng];
-            echo "<label>$dict_placeholder</label>";
-            echo "<input type=\"text\" name=\"street\" value=\"$dict_placeholder\">";
+            echo "<p id=\"street\">"
+            ."<label>" .$dict["street"][$lng] ."</label><input type=\"text\" name=\"street\" value=\"Teststrasse\">"
+            ."<mark>Please enter a street!</mark>"
+            ."</p>";
 
-            $dict_placeholder = $dict["house_number"][$lng];
-            echo "<label>$dict_placeholder</label>";
-            echo "<input type=\"text\" name=\"house_number\"/>";
+            echo "<p id=\"house_number\">"
+            ."<label>" .$dict["house_number"][$lng] ."</label>" ."<input type=\"text\" name=\"house_number\"/>"
+            ."<mark>Please enter a street number!</mark>"
+            ."</p>";
 
-            $dict_placeholder = $dict["city"][$lng];
-            echo "<label>$dict_placeholder</label>";
-            echo "<input type=\"text\" name=\"city\"/>";
+            echo "<p id=\"city\">"
+            ."<label>" .$dict["city"][$lng] ."</label>" ."<input type=\"text\" name=\"city\"/>"
+            ."<mark>Please enter a city!</mark>"
+            ."</p>";
 
-            $dict_placeholder = $dict["postal"][$lng];
-            echo "<label>$dict_placeholder</label>";
-            echo "<input type=\"text\" name=\"postal\"/>";
+            echo "<p id=\"postal\">"
+            ."<label>" .$dict["postal"][$lng] ."</label>" ."<input type=\"text\" name=\"postal\"/>"
+            ."<mark>Please enter a postal code!</mark>"
+            ."</p>";
 
-            $dict_placeholder = $dict["country"][$lng];
-            echo "<label>$dict_placeholder</label>";
-            echo "<input type=\"text\" name=\"country\"/>";
+            echo "<p id=\"country\">"
+            ."<label>" .$dict["country"][$lng] ."</label>" ."<input type=\"text\" name=\"country\"/>"
+            ."<mark>Please enter a country!</mark>"
+            ."</p>";
         }
     ?>
     <input type="submit" value=<?=$dict["order"][$lng]?>>

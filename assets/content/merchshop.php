@@ -2,6 +2,6 @@
 <?php require("assets/php/shopnav.php") ?>
 <?php include("assets/php/products.php");
 $id = "product";
-foreach($products as $product){ if ($product[1] == "shirt")
+foreach($products as $product){ if ($product[1] == "merch")
     echo "<a href=\"index.php?id=$id&lng=$lng&pid=$product[4]\"><img class=\"product\" src=\"$product[3]\" alt=\"$product[0]\" /></a>";
 }?>
