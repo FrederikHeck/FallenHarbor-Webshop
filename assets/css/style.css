@@ -1,8 +1,18 @@
 body {
     background-color: #004466;
     background-image: url("../img/background1.png");
-    background-size: cover;
 
+    /* Full height */
+    height: 100%;
+    width: 100%;
+    /* Center and scale the image nicely */
+    /* object-fit: cover */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    color: white;
     text-align: center;
     font-family: Comic Sans MS;
     letter-spacing: 1px;
@@ -10,14 +20,17 @@ body {
     overflow-x: hidden;
     overflow-y: hidden;
 }
+
+.italic {
+    font-style: italic;
+}
+
 h1 {
-    color: white;
     font-size: 40px;
     text-decoration: none;
 }
 
 h2 {
-    color: white;
     font-size: 30px;
     text-decoration: none;
 }
@@ -25,7 +38,6 @@ h2 {
 p {
     color: white;
     font-size: 14px;
-    font-family: sans-serif;
     padding: 4px;
 }
 
@@ -47,8 +59,10 @@ a:hover {
 label {
     color: white;
     padding: 6px 6px;
+    display: inline-block;
+    width: 110px;
+    text-align: right;
 }
-
 
 footer {
     /* center vertically */
@@ -96,9 +110,29 @@ iframe.homevideo {
     border-radius: 25px;
 }
 
+div.trackListTitle {
+    display: inline-block;
+}
+
+h4.trackListTitle {
+    padding: 0px 0px;
+    font-size: 14px;
+}
+
+p.track {
+    text-align: left;
+}
+
 img.product {
     height: 200px;
-    padding: 20px;
+    padding: 20px 20px 5px 20px;
+}
+.trackList {
+    display: inline-block;
+}
+
+.trackList p {
+    font-size: 12px;
 }
 
 .dialog {
@@ -110,4 +144,12 @@ mark {
     display: none;
     color: white;
     background-color: inherit;
+}
+
+.tracklist {
+    padding: 5px;
+}
+
+.tracklist p {
+    font-size: 18px;
 }

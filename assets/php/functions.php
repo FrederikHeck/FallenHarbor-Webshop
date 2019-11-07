@@ -41,7 +41,7 @@
         "home"=>"index.php?id=home&lng=$lng",
         "word"=>"index.php?id=word&lng=$lng",
         "shop"=>"index.php?id=musicshop&lng=$lng",
-        "you"=>"index.php?id=registration&lng=$lng",
+        "you"=>"index.php?id=you&lng=$lng",
         "merchshop"=>"index.php?id=merchshop&lng=$lng",
         "musicshop"=>"index.php?id=musicshop&lng=$lng",
     );

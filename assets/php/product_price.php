@@ -5,4 +5,3 @@
         $product_price_key = $product[2][$product_format_index];
     }
     $product_price = $prices[$product_price_key];
-?>

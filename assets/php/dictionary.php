@@ -139,5 +139,9 @@
             'de'=>'Ja',
             'en'=>'Yes'
         ),
+        "newAccount" => array(
+            'de' => 'Neu im Hafen?',
+            'en' => 'New at the Harbor?'
+        )
     )
 ?>
