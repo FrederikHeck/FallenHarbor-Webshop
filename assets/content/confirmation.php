@@ -3,7 +3,7 @@
 <?php
     require("assets/php/product_infos.php");
     include("assets/php/products.php");
-    echo "<img class=\"product\" src=\"$product[3]\" alt=\"$product[0]\" />";
+    # echo "<img class=\"product\" src=\"$product[3]\" alt=\"$product[0]\" />";
 ?>
 
 <?php

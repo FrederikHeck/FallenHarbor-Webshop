@@ -28,11 +28,18 @@ body {
 h1 {
     font-size: 40px;
     text-decoration: none;
+    padding-bottom: 10px;
 }
 
 h2 {
     font-size: 30px;
     text-decoration: none;
+}
+
+h3 {
+    font-size: 22px;
+    text-decoration: none;
+    padding-top: 20px;
 }
 
 p {
@@ -127,6 +134,23 @@ img.product {
     height: 200px;
     padding: 20px 20px 5px 20px;
 }
+
+img.cartProduct {
+    height: 120px;
+    padding: 5px 20px 5px 20px;
+    display: inline-block;
+}
+
+div.productInformation {
+    display: inline-block;
+    width: 200px;
+    text-align: left;
+}
+
+div.cartProduct {
+    display: block;
+}
+
 .trackList {
     display: inline-block;
 }
@@ -152,4 +176,83 @@ mark {
 
 .tracklist p {
     font-size: 18px;
+}
+
+.cartUpdated {
+    display: inline-block;
+    padding: 10px 17px;
+    margin-top: 10px;
+    border-style: solid;
+    border-width: 3px;
+    border-color: green;
+    border-radius: 10px;
+    background-color: rgba(255,255,255,0.1);
+}
+
+.checkoutBtn  {
+    margin-top: 7px;
+    display: inline-block;
+    font-family: Comic Sans MS;
+    padding: 3px 15px;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #009933;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 1px 4px #999;
+}
+
+.cartBtn  {
+    margin-top: 7px;
+    margin-right: 7px;
+    padding: 3px 10px;
+
+    display: inline-block;
+    font-family: Comic Sans MS;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #00664d;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 1px 2px #999;
+}
+.loginBtn{
+    padding: 3px 50px;
+}
+
+.checkoutBtn:hover {background-color: #00802b}
+
+.cartBtn:hover{background-color: #004d39}
+
+.checkoutBtn:active {
+    background-color: #00802b;
+    box-shadow: 0 2px #666;
+    transform: translateY(2px);
+}
+
+.cartBtn:active {
+    background-color: #004d39;
+    box-shadow: 0 1px #666;
+    transform: translateY(1px);
+}
+
+div.cart {
+    display: block;
+}
+
+.inline {
+    display: inline;
+}
+
+.paddingTop {
+    padding-top: 12px;
 }

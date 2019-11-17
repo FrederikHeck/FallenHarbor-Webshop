@@ -7,4 +7,17 @@
         $_SESSION['start'] = true;
     }
 
+    if($session === 'end'){
+        unset($_SESSION['user']);
+        $_SESSION['start'] = false;
+    }
+
     $sessionRunning = isset($_SESSION['start']) ? $_SESSION['start'] : false;
+
+    // Create cart on first request
+    if (!isset($_SESSION["cart"])) {
+        $_SESSION["cart"] = new Cart();
+    }
+
+    // Get cart from session
+    $cart = $_SESSION["cart"];

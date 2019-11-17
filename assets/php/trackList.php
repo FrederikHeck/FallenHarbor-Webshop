@@ -1,5 +1,5 @@
 <div class="trackListTitle">
-    <?="<img class=\"product\" src=\"$product[3]\" alt=\"$product[0]\"/>"?>
+    <?php $product->renderIMG(); ?>
     <h4 class="trackListTitle">Tracklist</h4>
 </div>
 <div class="trackList" style="display: none">

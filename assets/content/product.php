@@ -1,21 +1,20 @@
 <?php
-    include("assets/php/products.php");
+    require("assets/php/database_setup.php");
+    require("assets/php/products.php");
     require("assets/php/product_infos.php");
-    require("assets/php/product_price.php");
 ?>
 <h1><?=$dict["shop"][$lng]?></h1>
 <?php
     require("assets/php/shopnav.php");
-    echo "<h2>$product[0]</h2>";
-    if ($product[1] === "music"){
+    echo "<h2>$productName</h2>";
+    if ($productCategory === "music"){
         require("assets/php/trackList.php");
     }
     else
-        echo "<img class=\"product\" src=\"$product[3]\" alt=\"$product[0]\"/>";
+        $product->renderIMG();
 ?>
 
-
-    <form action=<?="index.php?id=registration&lng=$lng&pid=$pid"?> method="post">
+    <form action=<?="index.php?id=musicshop&lng=$lng&pid=$pid"?> method="post">
 
         <!-- hidden values -->
         <input type="hidden" name="pid" value="<?=$pid?>">
@@ -26,7 +25,7 @@
             <select name="product_format_index">
                 <?php
                     $i=0;
-                    foreach($product[2] as $product_format){
+                    foreach($productFormats as $product_format){
                         echo "<option value=\"$i\">$product_format</option>";
                         $i++;
                     }
@@ -35,7 +34,7 @@
         </p>
         <p>
             <?=$product_price?> CHF
-            <input type="submit" value=<?=$dict["buy"][$lng]?>>
+            <input type="submit" class="checkoutBtn" value=<?=$dict["buy"][$lng]?> >
         </p>
     </form>
 

@@ -44,5 +44,5 @@
         "you"=>"index.php?id=you&lng=$lng",
         "merchshop"=>"index.php?id=merchshop&lng=$lng",
         "musicshop"=>"index.php?id=musicshop&lng=$lng",
+        "cart"=>"index.php?id=cart&lng=$lng",
     );
-?>

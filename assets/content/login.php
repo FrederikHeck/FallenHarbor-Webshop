@@ -6,6 +6,6 @@
     <p>
         <label><?=$dict["password"][$lng]?></label><input type="password" name="password"/><br/>
     </p>
-    <input type="submit" name="submit" value="Login">
+    <button class="checkoutBtn loginBtn">Login</button>
 </form>
-<a href=<?="index.php?id=registration&lng=$newLng"?>><?=$dict["newAccount"][$lng]?></a>
+<p class="paddingTop"><a href=<?="index.php?id=registration&lng=$lng"?>><?=$dict["newAccount"][$lng]?></a></p>

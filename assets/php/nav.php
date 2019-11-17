@@ -18,6 +18,8 @@
                 <li class="nav">
                     <?php echo_Anchor(0, "shop")?></li>
                 <li class="nav"><?php echo_Anchor(0, "you")?></li></a></li>
+                <li class="nav"><?php echo_Anchor(0, "cart")?></li></a></li>
+
             </div>
         </div>
     </ul>

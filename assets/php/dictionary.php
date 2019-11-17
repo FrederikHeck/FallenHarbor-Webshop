@@ -142,6 +142,26 @@
         "newAccount" => array(
             'de' => 'Neu im Hafen?',
             'en' => 'New at the Harbor?'
-        )
-    )
-?>
+        ),
+        "cartUpdated" => array(
+            'de' => 'Das Produkt wurde erfolgreich zum Warenkorb hinzugefügt',
+            'en' => 'The product has been succesfully added to the cart'
+        ),
+        "checkout" => array(
+            'de' => 'Kasse',
+            'en' => 'Checkout'
+        ),
+        "cartEmpty" => array(
+            'de' => 'Hier ist nichts. Du hast kein Produkt ausgewählt.',
+            'en' => 'Here is nothing. You have not chosen a product.'
+        ),
+        "quantity" => array(
+            'de' => 'Anzahl',
+            'en' => 'Quantity'
+        ),
+        "userInf" => array(
+            'de' => 'Deine Angaben',
+            'en' => 'Your Data'
+        ),
+
+    );

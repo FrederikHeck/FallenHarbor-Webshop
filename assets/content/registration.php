@@ -2,7 +2,7 @@
 <script src="assets/js/validate.js"></script>
 
 <h1><?=$dict["you"][$lng]?></h1>
-<form action="<?="index.php?id=cart&lng=$lng";?>" method="post">
+<form action="<?="index.php?id=buy&lng=$lng";?>" method="post">
 
     <!--hidden values -->
     <input type="hidden" name="pid" value="<?=$pid?>">
@@ -26,8 +26,8 @@
     <?php
         #$shipping = isset($_GET['shipping']) ? $_GET['shipping'] : false; #at time unnecessary
         $shipping = true;
-        if ($products[$pid][1]==="music"){
-            if($products[$pid][2][$product_format_index]==="mp3"){
+        if ($productCategory ==="music"){
+            if($productFormats[$product_format_index]==="mp3"){
                 $shipping = false;
             }
         }
