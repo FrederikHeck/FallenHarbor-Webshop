@@ -1,6 +1,22 @@
 <?php
+    $products = new Products();
+    $products->loadAllProducts();
+
+    $trackListLITD = array(
+        array("Longing", "01:23"),
+        array("Dive In", "07:53"),
+        array("Deep Blue", "06:42"),
+        array("The Sunken City", "09:12"),
+        array("Between Unknown Creatures", "05:08"),
+        array("Losing the Light", "05:49"),
+        array("Stay Awake", "06:23"),
+        array("Lost in the Deep", "06:41"),
+        array("Don't go Gentle into the Night", "01:45"),
+        array("Fading Away", "08:10"),
+        array("Swallowed by the Dark", "03:14"),
+    );
+
     # Product infos that are passed from post or get are set here
-    include("assets/php/products.php");
     $pid = isset($_GET['pid']) ? $_GET['pid'] : '0';
     if ($pid === '0'){
         $pid = isset($_POST['pid']) ? $_POST['pid'] : '0';

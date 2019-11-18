@@ -1,14 +1,12 @@
 <?php
-    require("assets/php/database_setup.php");
-    require("assets/php/products.php");
-    require("assets/php/product_infos.php");
+    require("assets/php/func/product_infos.php");
 ?>
 <h1><?=$dict["shop"][$lng]?></h1>
 <?php
-    require("assets/php/shopnav.php");
+    require("assets/php/text/shopnav.php");
     echo "<h2>$productName</h2>";
     if ($productCategory === "music"){
-        require("assets/php/trackList.php");
+        require("assets/php/text/trackList.php");
     }
     else
         $product->renderIMG();
@@ -34,7 +32,7 @@
         </p>
         <p>
             <?=$product_price?> CHF
-            <input type="submit" class="checkoutBtn" value=<?=$dict["buy"][$lng]?> >
+            <input type="submit" class="btn" value=<?=$dict["buy"][$lng]?> >
         </p>
     </form>
 

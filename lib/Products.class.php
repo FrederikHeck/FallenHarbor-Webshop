@@ -1,15 +1,27 @@
 <?php
 class Products {
     private $products = array();
-    public static $id = 0;
 
     function __construct(){
     }
 
-    function createProduct($name, $category, $format, $link, $tag){
-        $this->products[] = new Music_product($name, $category, $format, $link, self::$id, $tag);
+    function createProduct($pid, $name, $category, $format, $link, $tag){
+        $this->products[$pid] = new Music_product($name, $category, $format, $link, $pid, $tag);
         //$this->products[self::$id] = new Music_product($name, $category, $format, $link, self::$id);
-        self::$id = self::$id + 1;
+    }
+
+    #load products from database
+    function loadAllProducts(){
+        if($result = DB::doQuery("SELECT * FROM product;")) {
+            while ($prd = $result->fetch_object()) {
+                $formats = explode(',',$prd->formats);
+                $formats = str_replace(' ', '', $formats);
+                $tags = explode(',',$prd->tags);
+                $tags = str_replace(' ', '', $tags);
+
+                $this->createProduct($prd->pid, $prd->name, $prd->category, $formats, $prd->img_link, $tags);
+            }
+        }
     }
 
     function removeProduct($id){
@@ -41,10 +53,6 @@ class Products {
         echo "<a href=\"index.php?id=$id&lng=$lng&pid=$pid\">"
                 ."<img class=\"product\" src=\"$link\" alt=\"$name()\" />"
             ."</a>";
-    }
-
-    function renderByTag(){
-
     }
 
     function getProduct($pid){

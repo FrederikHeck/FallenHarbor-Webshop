@@ -4,5 +4,10 @@
         $id = session_id();
     }
     else {
-        require("assets/content/welcome.php");
+        if ($displayError) {
+            require("assets/content/login.php");
+        }
+
+        else
+            require("assets/content/welcome.php");
     }

@@ -55,6 +55,10 @@
             'de'=>'Passwort',
             'en'=>'Password'
         ),
+        "repeatedPassword" => array(
+            'de'=>'Passwort bestätigen',
+            'en'=>'Confirm Password'
+        ),
         "lastname" => array(
             'de'=>'Nachname',
             'en'=>'Name'
@@ -79,9 +83,9 @@
             'de'=>'Strasse',
             'en'=>'Street'
         ),
-        "house_number" => array(
+        "street_number" => array(
             'de'=>'Hausnummer',
-            'en'=>'House Number'
+            'en'=>'Street Number'
         ),
         "city" => array(
             'de'=>'Stadt',
@@ -143,6 +147,14 @@
             'de' => 'Neu im Hafen?',
             'en' => 'New at the Harbor?'
         ),
+        "hasAccount" => array(
+            'de' => 'Bereits am Hafen angelegt?',
+            'en' => 'Already registered at the Harbor?'
+        ),
+        "register" => array(
+            'de' => 'Anlegen',
+            'en' => 'Register'
+        ),
         "cartUpdated" => array(
             'de' => 'Das Produkt wurde erfolgreich zum Warenkorb hinzugefügt',
             'en' => 'The product has been succesfully added to the cart'
@@ -163,5 +175,40 @@
             'de' => 'Deine Angaben',
             'en' => 'Your Data'
         ),
-
+        "wrongCombination" => array(
+            'de' => 'Unbekannte Benutzername-Passwort-Kombination',
+            'en' => 'Unknown combination of username and password'
+        ),
+        "yourAddress" => array(
+            'de' => 'Deine Adresse',
+            'en' => 'Your Address'
+        ),
+        "orLogin" => array(
+            'de' => 'Wenn du einen Account hast, kannst du dich auch einloggen',
+            'en' => 'If you have an account you may login instead'
+        ),
+        "next" => array(
+            'de' => 'Weiter',
+            'en' => 'Next'
+        ),
+        "forgotPW" => array(
+            'de' => 'Anmeldedaten vergessen?',
+            'en' => 'Forgot your login data?'
+        ),
+        "404" => array(
+            'de' => 'Diese Seite existiert nicht',
+            'en' => 'This site does not exist'
+        ),
+        "welcome" => array(
+            'de' => 'Willkommen im Hafen',
+            'en' => 'Welcome to the Harbor'
+        ),
+        "badRegistration" => array(
+            'de' => 'Entschuldige, etwas ist schiefgelaufen. Bitte versuche es erneut.',
+            'en' => 'Sorry, something went wrong. Please try again.'
+        ),
+        "pleaseConfirm" => array(
+            'de' => 'Du solltest jetzt oder gleich eine Mail bekommen. Folge dem dortigen Link um deinen Account zu aktivieren.',
+            'en' => 'You should have get now or very soon an e-mail. Check it up for activating your account.'
+        ),
     );

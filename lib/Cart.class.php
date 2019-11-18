@@ -11,11 +11,11 @@ class Cart {
         $this->items[$item][$format] += $num;
 
         if ($this->items[$item][$format] <= 0) #checks if at least 1 product of this format is left
-            unset($this->items[$item][$format]); #if no unset
+            unset($this->items[$item][$format]); #if no: unset
 
         $count = 0; #checks if there is at least 1 product of any format left
         foreach ($this->items[$item] as $item) $count++; #...by counting how many format indices are set
-        if($count===0) unset($this->items[$item]); #if no unset
+        if($count===0) unset($this->items[$item]); #if no: unset
 
     }
 
@@ -51,18 +51,21 @@ class Cart {
 
                     $totalPrice = $totalPrice + $item->getPrice($format) * $num; #update total Price
 
-                    # Product-buttons - each button has its own form for controlling the update amount (in cartTag)
-                    echo "<form class='inline' method='post' action='index.php?id=cart&lng=$lng&cartTag=-1'>"
+                    # Product-buttons - each button has its own form for controlling the update amount
+                    echo "<form class='inline' method='post' action='index.php?id=cart&lng=$lng'>"
+                        . "<input type='hidden' name='updateAmount' value=-1>"
                         . "<input type='hidden' name='itemID' value=$itemID>"
                         . "<input type='hidden' name='itemFormat' value=$format>"
                         . "<button class='cartBtn'>-</button>"
                         . "</form>";
-                    echo "<form class='inline' method='post' action='index.php?id=cart&lng=$lng&cartTag=-1000'>"
+                    echo "<form class='inline' method='post' action='index.php?id=cart&lng=$lng'>"
+                        . "<input type='hidden' name='updateAmount' value=-1000>"
                         . "<input type='hidden' name='itemID' value=$itemID>"
                         . "<input type='hidden' name='itemFormat' value=$format>"
                         . "<button class='cartBtn'>Remove</button>"
                         . "</form>";
-                    echo "<form class='inline' method='post' action='index.php?id=cart&lng=$lng&cartTag=1'>"
+                    echo "<form class='inline' method='post' action='index.php?id=cart&lng=$lng'>"
+                        . "<input type='hidden' name='updateAmount' value=+1>"
                         . "<input type='hidden' name='itemID' value=$itemID>"
                         . "<input type='hidden' name='itemFormat' value=$format>"
                         . "<button class='cartBtn'>+</button>"

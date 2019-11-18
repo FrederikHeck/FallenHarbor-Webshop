@@ -1,8 +1,7 @@
 <h1><?=$dict["thanks"][$lng]?></h1>
 
 <?php
-    require("assets/php/product_infos.php");
-    include("assets/php/products.php");
+    require("assets/php/func/product_infos.php");
     # echo "<img class=\"product\" src=\"$product[3]\" alt=\"$product[0]\" />";
 ?>
 

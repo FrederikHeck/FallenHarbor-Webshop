@@ -67,7 +67,7 @@ label {
     color: white;
     padding: 6px 6px;
     display: inline-block;
-    width: 110px;
+    width: 155px;
     text-align: right;
 }
 
@@ -189,8 +189,8 @@ mark {
     background-color: rgba(255,255,255,0.1);
 }
 
-.checkoutBtn  {
-    margin-top: 7px;
+.btn  {
+    margin: 7px;
     display: inline-block;
     font-family: Comic Sans MS;
     padding: 3px 15px;
@@ -229,11 +229,11 @@ mark {
     padding: 3px 50px;
 }
 
-.checkoutBtn:hover {background-color: #00802b}
+.btn:hover {background-color: #00802b}
 
 .cartBtn:hover{background-color: #004d39}
 
-.checkoutBtn:active {
+.btn:active {
     background-color: #00802b;
     box-shadow: 0 2px #666;
     transform: translateY(2px);
@@ -253,6 +253,41 @@ div.cart {
     display: inline;
 }
 
+
+p.wrongComb {
+    font-size: 16px;
+    padding: 8px 20px;
+    margin: 8px 10px;
+    display: inline-block;
+    color: darkblue;
+    border-radius: 8px;
+    background-color: rgba(255,255,255,0.6);
+}
+
+.boxBackground {
+    display: inline-block;
+    padding: 7px;
+
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 2px;
+    border-color: #004d39;
+    margin: 5px;
+    background-color: rgba(255,255,255,0.1);
+}
+
 .paddingTop {
     padding-top: 12px;
+}
+
+.marginTop {
+    margin-top: 16px;
+}
+
+.subtleLink:hover {
+    text-decoration: underline;
+}
+
+input {
+    border-radius: 6px;
 }
