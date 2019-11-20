@@ -211,4 +211,20 @@
             'de' => 'Du solltest jetzt oder gleich eine Mail bekommen. Folge dem dortigen Link um deinen Account zu aktivieren.',
             'en' => 'You should have get now or very soon an e-mail. Check it up for activating your account.'
         ),
+        "askUsername" => array(
+            'de' => 'Ich habe meinen Benutzernamen vergessen.',
+            'en' => 'I forgot my username.'
+        ),
+        "resetPW" => array(
+            'de' => 'Ich weiss mein Passwort nicht mehr',
+            'en' => 'I cannot remember my password'
+        ),
+        "requestData" => array(
+            'de' => 'Anmeldedaten anfordern',
+            'en' => 'Request Data'
+        ),
+        "request" => array(
+            'de' => 'Anfordern',
+            'en' => 'Request'
+        ),
     );

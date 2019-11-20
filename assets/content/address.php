@@ -1,5 +1,7 @@
 <?php require("assets/php/func/product_infos.php") ?>
 <?php
+# todo: option for creating account (i.e. with checkbox)
+# todo: validation of form
  if($sessionRunning){
      header("Location: index.php?id=buy&lng=$lng");
      exit;

@@ -12,3 +12,5 @@
     <p><a class="subtleLink" href=<?="index.php?id=registration&lng=$lng"?>><?=$dict["newAccount"][$lng]?></a></p>
     <p><a class="subtleLink" href=<?="index.php?id=forgotData&lng=$lng"?>><?=$dict["forgotPW"][$lng]?></a></p>
 </div>
+
+<!-- todo: validation of form -->

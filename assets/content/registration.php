@@ -19,4 +19,7 @@
 
     <div><button class="btn"><?=$dict["register"][$lng]?></button></div>
 </form>
-<p class="paddingTop"><a class="subtleLink" href=<?="index.php?id=registration&lng=$lng"?>><?=$dict["hasAccount"][$lng]?></a></p>
+<p class="paddingTop"><a class="subtleLink" href=<?="index.php?id=login&lng=$lng"?>><?=$dict["hasAccount"][$lng]?></a></p>
+
+<!-- todo: validation of form -->
+

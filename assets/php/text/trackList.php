@@ -1,6 +1,8 @@
 <div class="trackListTitle">
     <?php $product->renderIMG(); ?>
-    <h4 class="trackListTitle">Tracklist</h4>
+    <div class="tracklistButton">
+        <h4 class="trackListTitle">Tracklist</h4>
+    </div>
 </div>
 <div class="trackList" style="display: none">
     <?php

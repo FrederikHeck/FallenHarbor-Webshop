@@ -29,8 +29,7 @@
 
     $product_format_index = isset($_POST['product_format_index']) ? $_POST['product_format_index'] : '0';
 
-    # TO BE DONE: Preis mit Ajax nachladen
-    $product_price_key = ($product->getFormats())[$product_format_index];
+    $product_price_key = $product->getFormats()[$product_format_index];
     $product_price = $product->getPrice($product_price_key);
 
     #also email and firstname

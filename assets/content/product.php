@@ -10,6 +10,8 @@
     }
     else
         $product->renderIMG();
+     #todo: js onclick -> extra window grösseres bild
+
 ?>
 
     <form action=<?="index.php?id=musicshop&lng=$lng&pid=$pid"?> method="post">
@@ -20,18 +22,20 @@
 
         <p>
             <label>Medium: </label>
-            <select name="product_format_index">
-                <?php
+                <!-- todo: style-->
+                <select name="product_format_index">
+                    <?php
                     $i=0;
                     foreach($productFormats as $product_format){
-                        echo "<option value=\"$i\">$product_format</option>";
+                        $new_product_price = $product->getPrice($product_format);
+                        echo "<option onclick='adjustPrice($new_product_price)' value=\"$i\">$product_format</option>";
                         $i++;
                     }
-                ?>
-            </select>
+                    ?>
+                </select>
         </p>
         <p>
-            <?=$product_price?> CHF
+            <div id="priceContainer"><span id="productPrice"><?=$product_price?></span> CHF</div>
             <input type="submit" class="btn" value=<?=$dict["buy"][$lng]?> >
         </p>
     </form>
@@ -40,4 +44,14 @@
         $("h4.trackListTitle").click(function(){
             $(".trackList").toggle(1000);
         });
+
+        function adjustPrice(newProductPrice){
+            oldProductPrice = document.getElementById("productPrice").innerText;
+            if (oldProductPrice != newProductPrice){
+                $("#priceContainer").fadeOut(function () {
+                    document.getElementById("productPrice").innerHTML = newProductPrice;
+                    $("#priceContainer").fadeIn();
+                });
+            }
+        }
     </script>
