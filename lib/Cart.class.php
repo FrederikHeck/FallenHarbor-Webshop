@@ -70,7 +70,7 @@ class Cart
                         . "<input class='item' type='hidden' name='itemID' value=$itemID>"
                         . "<input class='format' type='hidden' name='itemFormat' value=$format>"
                         . "<button class='btnDec cartBtn'>-</input>"
-                        . "<button class='btnRmv cartBtn'>Remove</button>"
+                        . "<button class='btnRmv cartBtn'>" . $dict['remove'][$lng] . "</button>"
                         . "<button class='btnInc cartBtn'>+</button>"
                         . "</form>";
 

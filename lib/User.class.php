@@ -41,7 +41,7 @@ class User {
     }
 
     # create new user, all data is escaped in here
-    public function createUser($username, $password, $firstname="", $lastname="", $street="", $street_number="", $city="", $postal="", $country=""){
+    public function createUser($username, $password, $firstname="", $lastname="", $street="", $street_number="", $city="", $postal="", $country="", $email=""){
         $db = DB::getInstance();
 
         $this->username = $db->escape_string($username);
@@ -53,11 +53,12 @@ class User {
         $this->city = $db->escape_string($city);
         $this->postal = $db->escape_string($postal);
         $this->country = $db->escape_string($country);
+        $this->email = $db->escape_string($email);
     }
 
     public function addUserToDB(){
         $sql = "INSERT INTO user (username, password, firstname, lastname, street, street_number, city, postal, country)
-                VALUES ('$this->username', '$this->password', '$this->firstname', '$this->lastname', '$this->street', 
+                VALUES ('$this->username', '$this->password', '$this->firstname', '$this->lastname', '$this->street',
                 '$this->street_number', '$this->city', '$this->postal', '$this->country')";
 
         $res = DB::doQuery($sql);

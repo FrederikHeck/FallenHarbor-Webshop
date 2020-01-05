@@ -227,4 +227,16 @@
             'de' => 'Anfordern',
             'en' => 'Request'
         ),
+        "remove" => array(
+            'de' => 'Entfernen',
+            'en' => 'Remove'
+        ),
+        "input_error" => array(
+            'de' => 'Die Input-Daten sind fehlerhaft. Bitte füllen Sie alle Felder aus und überprüfen Sie Ihre Angaben.',
+            'en' => 'The input data is not correct. Please fill in all fields and review your data.'
+        ),
+        "buy_final" => array(
+            'de' => 'Finale Überprüfung',
+            'en' => 'Final Review'
+        ),
     );

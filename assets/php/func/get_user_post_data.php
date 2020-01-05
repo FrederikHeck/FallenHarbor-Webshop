@@ -10,3 +10,4 @@ $street_number = isset($_POST['street_number']) ? $_POST['street_number'] : "";
 $city = isset($_POST['city']) ? $_POST['city'] : "";
 $postal = isset($_POST['postal']) ? $_POST['postal'] : "";
 $country = isset($_POST['country']) ? $_POST['country'] : "";
+$email = isset($_POST['email']) ? $_POST['email'] : "";

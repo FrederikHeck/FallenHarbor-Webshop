@@ -7,7 +7,7 @@
         $cart->render($dict, $lng, $products);
         $totalPrice = $cart->getTotalPrice();
         if($totalPrice !== 0) echo "<h3>Total-".$dict['price'][$lng].": $totalPrice CHF</h3>"
-            . "<a href='index.php?id=address&lng=$lng'><button class='btn'>".$dict["buy"][$lng]."</button></a>";
+            . "<a href='index.php?id=address&lng=$lng&redirection=stay'><button class='btn'>".$dict["checkout"][$lng]."</button></a>";
     echo "</div>";
 
 ?>

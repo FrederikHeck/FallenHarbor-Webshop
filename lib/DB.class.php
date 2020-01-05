@@ -1,10 +1,21 @@
 <?php
 # to include: $db = DB::getInstance();
 class DB extends mysqli{
+
+    //todo: read in from xml
+    /*
+    const HOST = "localhost";
+    const USER = "hafen";
+    const PW = "T9GkZ6jTxi,WlgZZznw:";
+    const DB_NAME = "hafen";
+    //*/
+
+    //*
     const HOST = "localhost";
     const USER = "root";
     const PW = "";
-    const DB_NAME = "fallen_harbor";
+    const DB_NAME = "hafen";
+    //*/
     static private $instance;
     public function __construct() {
         parent::__construct(

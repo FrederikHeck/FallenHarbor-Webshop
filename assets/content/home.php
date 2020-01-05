@@ -1,3 +1,3 @@
 <a href="<?=$nav['home']?>"><img class="heading-font" src="assets/img/fallenharbor.png" alt="logo" /></a>
-<section><iframe class="homevideo" src="https://www.youtube.com/embed/cxxIN6fyj58"></iframe></section>
+<section><iframe class="homevideo" src="https://www.youtube.com/embed/cxxIN6fyj58?autoplay=1"></iframe></section>
 <img class="diver" src="assets/img/taucher.png" alt="logo" />

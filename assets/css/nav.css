@@ -3,30 +3,24 @@ nav {
     background-color: rgba(0, 0, 0, .25);
 }
 
-ul.nav {
-    /* center vertically */
-    display: -webkit-flexbox;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-    justify-content: center;
-
-    padding: 10px 0;
-}
-
 li.nav {
     display: inline-block;
     font-size: 20px;
-    padding: 20px 20px 20px 20px;
+    padding: 25px 20px 30px 20px;
 }
 
-li.shopnav {
+li.navPCT {
+    display: inline-block;
     padding: 0px 20px;
 }
+
+ul.shopnav {}
+
+li.shopnav {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
 #thissite {
     color: green;
 }
@@ -35,51 +29,35 @@ li.shopnav {
     color: red;
 }
 
-li.navPCT {
-    display: inline-block;
-}
 
 div.navContainerLeft {
-    width: 55%;
-    display: inline-block;
-    text-align: right;
-}
-
-div.nCL1{
-    width: 10%;
+    float:left;
     text-align: left;
-    display: inline-block;
-}
-div.nCL2{
-    width: 86%;
-    text-align: right;
-    display: inline-block;
-
+    width: 35%;
 }
 
 div.navContainerMid {
-    width: 10%;
-    display: inline-block;
+    display: inline;
+    text-align: center;
 }
 
 div.navContainerRight {
-    width: 55%;
-    display: inline-block;
-}
-
-div.nCR1{
-    width: 22%;
-    text-align: left;
-    display: inline-block;
-}
-div.nCR2{
-    width: 70%;
-    text-align: center;
-    display: inline-block;
+    float: right;
+    text-align: right;
+    width: 35%;
 }
 
 img.home {
-    width: 85px;
+    height: 47px;
     font-size: 32px;
     font-weight: bold;
+
+    vertical-align: middle;
+
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
 }

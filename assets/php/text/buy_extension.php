@@ -1,16 +1,23 @@
+<h2><?=$dict["buy_final"][$lng]?></h2>
 <h3><?=$dict["cart"][$lng]?></h3>
 <?php
 require("assets/php/func/product_infos.php");
 $cartEmpty = $cart->render($dict, $lng, $products);
-echo "<h3>" .$dict["userInf"][$lng]. "</h3>";
+$totalPrice = $cart->getTotalPrice();
+if($totalPrice !== 0) echo "<h3>Total-".$dict['price'][$lng].": $totalPrice CHF</h3>";
+
 
 # Display User Information
-# todo: ask for missing information
-if($user->getStreet() != null){
-    echo "<p>". $user->getStreet() . " " . $user->getStreetNumber() ."</p>";
-}
+echo "<h3>" .$dict["userInf"][$lng]. "</h3>";
+echo "<div class='boxBackground'>";
+//. "<form action='index.php?id=address&lng=$lng&redirection=change' method='post'>"; //todo: give data in a postform
+echo "<p>" . $user->getFirstname() . " " . $user->getLastname() ."</p>";
+echo "<p>" . $user->getEmail() . "</p>";
+echo "<p>". $user->getStreet() . " " . $user->getStreetNumber() ."</p>";
 echo "<p>" . $user->getPostal() . " " . $user->getCity() . "</p>";
-echo "<p>" . $user->getCountry() . " " . "</p>";
+echo "<p>" . $user->getCountry() . " " . "</p>"
+. "<a class='subtleLink black' href='index.php?id=address&lng=$lng&redirection=change'>" . "Change" . "</a>"
+. "</div>";
 
 ?>
     <!-- checkout button popup -->
@@ -29,6 +36,6 @@ echo "<p>" . $user->getCountry() . " " . "</p>";
             <input class="dialog" type="submit" value="<?=$dict["yes"][$lng]?>" onclick="submitForm()">
         </div>
     </form>
-    <button class="btn"><?=$dict["buy"][$lng]?></button>
+    <button class="btn btnBuy"><?=$dict["buy"][$lng]?></button>
 
 <?php require("assets\js\confirm_order.php")?>

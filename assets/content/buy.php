@@ -9,10 +9,8 @@ if ($session=="start" && !$sessionRunning) { //user came form address.php and ty
     $id = session_id();
     exit;
 }
-if($session=="startMiniSession") { //user came from address.php and used address form
-    #create temp-user from post, save it in a session var
+if($miniSessionRunning) { //user came from address.php and used address form
     require("assets/php/text/buy_extension.php");
     exit;
 }
 require("assets/content/404.php");
-

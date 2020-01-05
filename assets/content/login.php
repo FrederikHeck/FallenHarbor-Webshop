@@ -2,7 +2,7 @@
 <form method="post" action=<?="index.php?id=you&lng=$lng&session=start"?>>
     <?php
     if($displayError){
-        echo "<p class='wrongComb'>".$dict['wrongCombination'][$lng]."</p>";
+        echo "<p class='wrongData'>".$dict['wrongCombination'][$lng]."</p>";
     }
     ?>
     <?php require("assets/php/text/input_login.php") ?>

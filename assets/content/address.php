@@ -1,16 +1,20 @@
 <?php require("assets/php/func/product_infos.php") ?>
 <?php
 # todo: option for creating account (i.e. with checkbox)
-# todo: validation of form
- if($sessionRunning){
+
+//if the user already has a session he will be redirected to the buy site immediately
+$redirection = isset($_GET['redirection']) ? $_GET['redirection'] : "";
+
+ if(($sessionRunning || $miniSessionRunning) && $redirection != "change"){
      header("Location: index.php?id=buy&lng=$lng");
      exit;
  }
 ?>
-<script src="assets/js/validate.js"></script>
 
-<h1><?=$dict["yourAddress"][$lng]?></h1>
-<form action="<?="index.php?id=buy&lng=$lng&session=startMiniSession";?>" method="post">
+<!--validate on server and client side -->
+<?php require("assets/php/func/validation_handler.php") ?>
+
+<form action="<?php echo htmlspecialchars("index.php?id=address");?>" method="post">
 
     <!--hidden values -->
     <input type="hidden" name="pid" value="<?=$pid?>">
