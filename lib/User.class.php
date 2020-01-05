@@ -57,9 +57,9 @@ class User {
     }
 
     public function addUserToDB(){
-        $sql = "INSERT INTO user (username, password, firstname, lastname, street, street_number, city, postal, country)
+        $sql = "INSERT INTO user (username, password, firstname, lastname, street, street_number, city, postal, country, email)
                 VALUES ('$this->username', '$this->password', '$this->firstname', '$this->lastname', '$this->street',
-                '$this->street_number', '$this->city', '$this->postal', '$this->country')";
+                '$this->street_number', '$this->city', '$this->postal', '$this->country', '$this->email')";
 
         $res = DB::doQuery($sql);
         return $res != null;
@@ -67,7 +67,7 @@ class User {
 
     public function saveUser(){
         $sql = sprintf("UPDATE user SET username='%s', password='%s', firstname='%s', lastname='%s',
-             street='%s', streetnumber='%s', city='%s', postal='%s', country='%s' WHERE id = %d;",$this->username, $this->password, $this->firstname,
+             street='%s', streetnumber='%s', city='%s', postal='%s', country='%s', email='%s' WHERE id = %d;",$this->username, $this->password, $this->firstname,
             $this->lastname, $this->street, $this->street_number, $this->city, $this->postal, $this->country, $this->id
         );
         $res = DB::doQuery($sql);

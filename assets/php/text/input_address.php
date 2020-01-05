@@ -6,10 +6,6 @@
     <label class='form'><?=$dict["lastname"][$lng]?></label><input value="<?=$lastname?>" type="text" name="lastname"/>
     <mark>Please enter a name!</mark>
 </p>
-<p id="email">
-    <label class='form'><?=$dict["email"][$lng]?></label><input value="<?=$email?>" type="email" name="email"/>
-    <mark>Please enter an email!</mark>
-</p>
 <p id="street">
     <label class='form'><?=$dict["street"][$lng]?></label><input value="<?=$street?>" type="text" name="street"/>
     <mark>Please enter a street!</mark>

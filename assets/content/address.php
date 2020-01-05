@@ -20,6 +20,10 @@ $redirection = isset($_GET['redirection']) ? $_GET['redirection'] : "";
     <input type="hidden" name="pid" value="<?=$pid?>">
     <input type="hidden" name="product_format_index" value="<?=$product_format_index?>">
 
+    <p id="email">
+        <label class='form'><?=$dict["email"][$lng]?></label><input value="<?=$email?>" type="email" name="email"/>
+        <mark>Please enter an email!</mark>
+    </p>
     <?php require("assets/php/text/input_address.php") ?>
     <!-- Option to create an account -->
 

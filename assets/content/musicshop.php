@@ -10,7 +10,7 @@ if (isset($_POST["pid"])) { # box that is displayed if a user just added an item
     $_SESSION["cart"] = $cart;
     echo "<div class='cartUpdated'>";
     echo "<h4>" . $dict["cartUpdated"][$lng] . "</h4>";
-    echo "<a href='index.php?id=cart&lng=$lng'><button class='btn'>" . $dict["checkout"][$lng] . "</button></a>";
+    echo "<a href='index.php?id=cart&lng=$lng'><button class='btn'>" . $dict["cart"][$lng] . "</button></a>";
     echo "</div>";
 }
 ?>

@@ -12,7 +12,7 @@ $usernameExists = false;
 #does the username exist?
 if(User::getUserByUsername($username) == null){
     $user = new User();
-    $user->createUser($username, $password, $firstname, $lastname, $street, $street_number, $city, $postal, $country);
+    $user->createUser($username, $password, $firstname, $lastname, $street, $street_number, $city, $postal, $country, $email);
     $user->addUserToDB();
     $user = User::getUserByUsername($username); #fetch just created user-instance from DB
     if ($user != null)

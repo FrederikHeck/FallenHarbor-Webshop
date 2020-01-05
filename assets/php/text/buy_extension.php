@@ -38,4 +38,4 @@ echo "<p>" . $user->getCountry() . " " . "</p>"
     </form>
     <button class="btn btnBuy"><?=$dict["buy"][$lng]?></button>
 
-<?php require("assets\js\confirm_order.php")?>
+<?php require("assets/js/confirm_order.php")?>

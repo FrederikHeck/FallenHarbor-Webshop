@@ -119,9 +119,17 @@
             'de'=>'Deine Bestellung war erfolgreich.',
             'en'=>'Your order has been successful.'
         ),
+        "mailContent2" => array(
+            'de'=>'Dein Account wurde erfolgreich angelegt. Willkommen an Board.',
+            'en'=>'Your account has been successfully created. I welcome you in my lovely crew.'
+        ),
         "mailSubject" => array(
             'de'=>'[Hafenpost] Bestellung Erfolgreich!',
-            'en'=>'[Message from your Harbor] Order Complete!'
+            'en'=>'[Your Harbor] Order Complete!'
+        ),
+        "mailSubject" => array(
+            'de'=>'[Hafenpost] Account erfolgreich angelegt!',
+            'en'=>'[Your Harbor] Account successful created!'
         ),
         "boxConfirmTitle" => array(
             'de'=>'Bestellung abschliessen',

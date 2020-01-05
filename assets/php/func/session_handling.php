@@ -39,7 +39,7 @@
     elseif ($session === 'startMiniSession'){
         require("assets/php/func/get_user_post_data.php");
         $user = new User();
-        $user->createUser($username, $password, $firstname, $lastname, $street, $street_number, $city, $postal, $country);
+        $user->createUser($username, $password, $firstname, $lastname, $street, $street_number, $city, $postal, $country, $email);
         $_SESSION['user'] = $user;
         $_SESSION['startMini'] = true;
     }

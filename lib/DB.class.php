@@ -3,23 +3,29 @@
 class DB extends mysqli{
 
     //todo: read in from xml
-    /*
-    const HOST = "localhost";
-    const USER = "hafen";
-    const PW = "T9GkZ6jTxi,WlgZZznw:";
-    const DB_NAME = "hafen";
-    //*/
 
-    //*
+    /*
     const HOST = "localhost";
     const USER = "root";
     const PW = "";
     const DB_NAME = "hafen";
     //*/
+
+
+    private $HOST;
+    private $USER;
+    private $PW;
+    private $DB_NAME;
+
     static private $instance;
     public function __construct() {
+        $db_credentials = simplexml_load_file(dirname(__DIR__) . "/xml/db.xml") or die("Error: Cannot create XML-object");
+        $this->HOST = $db_credentials->HOST;
+        $this->USER = $db_credentials->USER;
+        $this->PW = $db_credentials->PW;
+        $this->DB_NAME = $db_credentials->DB_NAME;
         parent::__construct(
-            self::HOST, self::USER, self::PW,self::DB_NAME);
+            "$this->HOST", "$this->USER", "$this->PW","$this->DB_NAME");
     }
 
     static public function getInstance() {

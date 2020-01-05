@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<db>
+    <HOST>localhost</HOST>
+    <USER>root</USER>
+    <PW></PW>
+    <DB_NAME>hafen</DB_NAME>
+</db>
