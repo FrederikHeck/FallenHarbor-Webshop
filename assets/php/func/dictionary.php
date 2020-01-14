@@ -123,11 +123,11 @@
             'de'=>'Dein Account wurde erfolgreich angelegt. Willkommen an Board.',
             'en'=>'Your account has been successfully created. I welcome you in my lovely crew.'
         ),
-        "mailSubject" => array(
+        "mailSubject1" => array(
             'de'=>'[Hafenpost] Bestellung Erfolgreich!',
             'en'=>'[Your Harbor] Order Complete!'
         ),
-        "mailSubject" => array(
+        "mailSubject2" => array(
             'de'=>'[Hafenpost] Account erfolgreich angelegt!',
             'en'=>'[Your Harbor] Account successful created!'
         ),

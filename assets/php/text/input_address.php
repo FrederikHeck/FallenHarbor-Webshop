@@ -26,3 +26,4 @@
     <label class='form'><?=$dict["country"][$lng]?></label><input value="<?=$country?>" type="text" name="country"/>
     <mark>Please enter a country!</mark>
 </p>
+

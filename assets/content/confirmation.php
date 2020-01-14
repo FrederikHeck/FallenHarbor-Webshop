@@ -2,7 +2,7 @@
 
 <?php
     $to = $user->getEmail();
-    $dict_placeholder = $dict["mailSubject"][$lng];
+    $dict_placeholder = $dict["mailSubject1"][$lng];
     $subject = $dict_placeholder;
 
     $mailContent = $dict["mailContent1"][$lng];

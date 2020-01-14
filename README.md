@@ -1,14 +1,18 @@
 To - Do:
 -----------
-* Registration, Login: Input Validation
+* Registration: Input Validation
+* Registration: Validate that both PW are same
 * Semantische URLs
 * DB erneuern
+* Mail: Produkte einfügen
 * (User-Site)
 * (Style checkbox)
+* Push git, remarks word-seite, mail locher
 -----------
 
 Validierung:
 * Enable/Disable Order-Button (2 Fälle), Validierung schärfen
+* AJAX-Request: Username schon vergeben oder nicht
 
 Wichtige Features:
 * Mit htacess geschützten Musik-Download-Bereich
@@ -17,7 +21,7 @@ Wichtige Features:
 * Order History
 * Responsive CSS
 * User: PW vergessen
-* Bestätigungs - Email
+* Bestätigungs - Email nach Registrierung
 
 Anderes:
 * Mail verbessern
@@ -26,8 +30,8 @@ Anderes:
 ----------
 
 Remarks und Bugs:
-* Registration: Validate that both PW are same
 * Warenkorb-Button Buy-Site
+* Mini-session in guest session umbenennen
 * Unterscheidung Change-Data auf Buy-Site, jenachdem ob accountuser oder gast
 * Bestellung schiefgelaufen -> Danke nicht anzeigen
 * Sprach-Wechsel bei Produkten, Bestellung (nicht zwei mal Mail versenden)

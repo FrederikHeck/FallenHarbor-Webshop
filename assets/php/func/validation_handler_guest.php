@@ -3,8 +3,8 @@
 
 
 <?php
-//checks if input validation was succesful. If yes a minisession is started
-//in which all userr data is stored in a session variable, the the user will be redirected.
+//checks if input validation was successful. If yes a mini-session is started
+//in which all user data is stored in a session variable, the the user will be redirected.
 //If not, the user stays on the page and gets an information
 
     $error_accured = false;

@@ -1,5 +1,6 @@
 <?php require("assets/php/func/autoloader.php") ?>
 <?php $db = DB::getInstance()?>
+<?php require("assets/php/func/get_user_post_data.php") ?>
 <?php require("assets/php/func/cookie_handling.php") ?>
 <?php require("assets/php/func/session_handling.php") ?>
 <!doctype html>

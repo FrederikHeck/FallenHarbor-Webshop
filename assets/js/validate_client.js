@@ -6,7 +6,7 @@ $(function(){
     var email = true;
     var house_number = true;
     var city = true;
-    var postal_code = true;
+    var postal = true;
     var country = true;
 
     // Disable submit button
@@ -109,27 +109,9 @@ $(function(){
         updateSubmit();
     });
 
-    /*
-    $('#lastname input').focusout(function(){
-        lastname = simpleValidate('#lastname mark', lastname);
-    });
-    */
-
     // Updates submit button
     function updateSubmit() {
         $submit.prop('disabled', (name || email));
     }
 
-    //checks that only (latin) letters are used
-    function simpleValidate(selector, idName){
-        var regex = /^[a-z\u00C0-\u02AB'´`]+\.?/;
-        idName = !regex.test(this.value);
-        if (idName) {
-            $(selector).fadeIn(1000);
-        } else {
-            $(selector).fadeOut(1000);
-        }
-        updateSubmit();
-        return idName;
-    }
 });

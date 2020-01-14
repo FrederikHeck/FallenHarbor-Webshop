@@ -7,16 +7,10 @@
 
     #login-attempt: check username password combination
     if($session === 'start'){
-        $username = isset($_POST['username']) ? $_POST['username'] : '';
-        $username = $db->escape_String($username);
 
         #does the user exist?
         if($user = User::getUserByUsername($username)) {
-            $enteredPassword = isset($_POST['password']) ? $_POST['password'] : '';
-            //validate Password
-
-            $hashed_password = password_hash($enteredPassword, PASSWORD_DEFAULT);
-
+            $enteredPassword = $password;
             $realPassword = $user->getPassword();
 
             #is the password correct
@@ -29,6 +23,7 @@
         }
         else $displayError = true;
     }
+
     #logout request
     elseif ($session === 'end'){
         unset($_SESSION['user']);

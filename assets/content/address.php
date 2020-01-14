@@ -12,7 +12,7 @@ $redirection = isset($_GET['redirection']) ? $_GET['redirection'] : "";
 ?>
 
 <!--validate on server and client side -->
-<?php require("assets/php/func/validation_handler.php") ?>
+<?php require("assets/php/func/validation_handler_guest.php") ?>
 
 <form action="<?php echo htmlspecialchars("index.php?id=address");?>" method="post">
 
