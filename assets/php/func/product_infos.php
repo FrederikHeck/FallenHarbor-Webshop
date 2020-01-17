@@ -31,7 +31,3 @@
 
     $product_price_key = $product->getFormats()[$product_format_index];
     $product_price = $product->getPrice($product_price_key);
-
-    #also email and firstname
-    $email = isset($_POST['email']) ? $_POST['email'] : '';
-    $firstname = isset($_POST['firstname']) ? $_POST['firstname'] : '';

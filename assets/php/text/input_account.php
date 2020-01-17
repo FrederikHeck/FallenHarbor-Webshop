@@ -1,18 +1,18 @@
 <p id="username">
     <label class='form'><?=$dict["username"][$lng]?></label><input type="text" name="username"/>
-    <mark>Please enter a name!</mark>
+    <mark id="usernameInvalid">Please enter a username!</mark>
+    <mark id="usernameExists">Sorry, this username is already in use.</mark>
 </p>
 <p id="email">
     <label class='form'><?=$dict["email"][$lng]?></label><input type="email" name="email"/>
-    <mark>Please enter an email!</mark>
+    <mark>Please enter a valid email!</mark>
 </p>
-<p id="password">
+<p id="pw1">
     <label class='form'><?=$dict["password"][$lng]?></label><input type="password" name="password"/>
-    <mark>Please enter a name!</mark>
+    <mark>The password should at least be 8 characters long, having each of the following at least once:</mark>
+    <mark>An uppercase letter, a lowercase letter, a special character (%,&,£,$,...).</mark>
 </p>
-<p id="repeatedPassword">
+<p id="pw2">
     <label class='form'><?=$dict["repeatedPassword"][$lng]?></label><input type="password" name="repeatedPassword"/>
-    <mark>Please enter a name!</mark>
+    <mark>The two passwords don't match</mark>
 </p>
-
-<!-- Validate that both passwords are the same -->

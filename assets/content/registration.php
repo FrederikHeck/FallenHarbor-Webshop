@@ -1,20 +1,11 @@
 <?php
 require("assets/php/func/validation_handler_registration.php");
-//todo: implement validation
-?>
-<script src="assets/js/validate.js"></script>
-
-<?php
 require("assets/php/func/create_user.php");
 if ($successful_registration && !$usernameExists){
     header("Location: index.php?id=validate_account&lng=$lng");
     exit;
 }
 ?>
-
-
-
-
 
 <h1><?=$dict["you"][$lng]?></h1>
 <?php if(!$successful_registration && $createUser)
@@ -35,6 +26,3 @@ if ($successful_registration && !$usernameExists){
     <div><button class="btn"><?=$dict["register"][$lng]?></button></div>
 </form>
 <p class="paddingTop"><a class="subtleLink" href=<?="index.php?id=login&lng=$lng"?>><?=$dict["hasAccount"][$lng]?></a></p>
-
-<!-- todo: validation of form -->
-

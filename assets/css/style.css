@@ -169,9 +169,12 @@ div.cartProduct {
 }
 
 mark {
+    font-size: 12px;
+    padding: 2px;
     display: none;
-    color: white;
     background-color: inherit;
+    font-style: italic;
+    color: #b3cccc;
 }
 
 .tracklist {

@@ -1,27 +1,39 @@
 <h1><?=$dict["thanks"][$lng]?></h1>
 
 <?php
-    $to = $user->getEmail();
-    $dict_placeholder = $dict["mailSubject1"][$lng];
-    $subject = $dict_placeholder;
+require("assets/php/func/product_infos.php");
 
-    $mailContent = $dict["mailContent1"][$lng];
+echo "<div id='cartContainer'>";
+$renderString = $cart->renderMail($dict, $lng, $products);
+$totalPrice = $cart->getTotalPrice();
 
-    $message = "Hey $username!\n\n";
-    $message .= "$mailContent\n\n";
-    $message .= "Fallen Harbor :)\n\n";
 
-    $header = "From:hafen@uber.space \r\n";
-    #$header .= "MIME-Version: 1.0\r\n";
-    #$header .= "Content-type: text/html\r\n";
-    //*
-    $retval = mail ($to,$subject,$message,$header);
-    if( $retval == true ) {
+$to = $user->getEmail();
+$dict_placeholder = $dict["mailSubject1"][$lng];
+$subject = $dict_placeholder;
 
-        echo "<p>" .$dict["mailConfirm"][$lng] . " " . $user->getEmail() ."</p>";
-    } else {
-        $dict_placeholder = $dict["mailError"][$lng];
-        echo "<p>$dict_placeholder hafen@uber.space</p>";
-    }
-    //*/
-?>
+$mailContent = $dict["mailContent1"][$lng];
+
+$message = "Hey " . $user->getUsername() . "!\n\n";
+$message .= "$mailContent\n";
+$message .= "-------------------------------------------------------------\n";
+$message .= $renderString;
+$message .= "-------------------------------------------------------------\n";
+$message .= "Total: $totalPrice CHF\n";
+$message .= "-------------------------------------------------------------\n\n";
+$message .= "Fallen Harbor :)\n\n";
+
+$header = "From:hafen@uber.space \r\n";
+#$header .= "MIME-Version: 1.0\r\n";
+#$header .= "Content-type: text/html\r\n";
+//*
+$retval = mail($to, $subject, $message, $header);
+if ($retval == true) {
+
+    echo "<p>" . $dict["mailConfirm"][$lng] . " " . $user->getEmail() . "</p>";
+} else {
+    $dict_placeholder = $dict["mailError"][$lng];
+    echo "<p>$dict_placeholder hafen@uber.space</p>";
+}
+
+unset($_SESSION["cart"]);

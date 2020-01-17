@@ -1,18 +1,16 @@
 To - Do:
 -----------
-* Registration: Input Validation
-* Registration: Validate that both PW are same
+* Registration: Server Validation
 * Semantische URLs
 * DB erneuern
 * Mail: Produkte einfügen
-* (User-Site)
 * (Style checkbox)
 * Push git, remarks word-seite, mail locher
 -----------
 
 Validierung:
-* Enable/Disable Order-Button (2 Fälle), Validierung schärfen
-* AJAX-Request: Username schon vergeben oder nicht
+* Enable/Disable Order-Button (2 Fälle), Validierung schärfen, 
+teilweise sofortiges JS-Feedback
 
 Wichtige Features:
 * Mit htacess geschützten Musik-Download-Bereich

@@ -82,4 +82,30 @@ class Cart
             return true;
         }
     }
+
+    public function renderMail($dict, $lng, $products)
+    {
+        if ($this->isEmpty()) {
+            $this->totalPrice = 0;
+            return false; #cart is empty -> ERROR (should never happen)
+        } else {
+            $totalPrice = 0;
+            $renderString = "";
+            //$renderString .= "<ul class='cart'>";
+            foreach ($this->items as $itemID => $itemFormats) {
+                $item = $products->getProduct($itemID);
+                foreach ($itemFormats as $format => $num) {
+
+                    # Product-infos
+                    $renderString .= "$num x "
+                        . $item->getName() . " ($format) - " . $item->getPrice($format) . " CHF\n";
+
+                    $totalPrice = $totalPrice + $item->getPrice($format) * $num; #update total Price
+                }
+            }
+            //$renderString .= "</ul>";
+            $this->totalPrice = $totalPrice; #cart has products
+            return $renderString;
+        }
+    }
 }

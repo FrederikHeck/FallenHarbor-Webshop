@@ -116,8 +116,8 @@
             'en'=>'Something went wrong. Please try again or don\'t hesitate contacting me diretcly at'
         ),
         "mailContent1" => array(
-            'de'=>'Deine Bestellung war erfolgreich.',
-            'en'=>'Your order has been successful.'
+            'de'=>'Deine Bestellung war erfolgreich:',
+            'en'=>'Your order has been successful:'
         ),
         "mailContent2" => array(
             'de'=>'Dein Account wurde erfolgreich angelegt. Willkommen an Board.',

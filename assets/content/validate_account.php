@@ -6,7 +6,7 @@ $subject = $dict_placeholder;
 
 $mailContent = $dict["mailContent2"][$lng];
 
-$message = "Hey $firstname!\n\n";
+$message = "Hey " . $user->getFirstname() . "!\n\n";
 $message .= "$mailContent\n\n";
 $message .= "Fallen Harbor :)\n\n";
 
