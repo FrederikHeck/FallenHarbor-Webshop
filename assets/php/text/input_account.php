@@ -1,10 +1,10 @@
 <p id="username">
-    <label class='form'><?=$dict["username"][$lng]?></label><input type="text" name="username"/>
+    <label class='form'><?=$dict["username"][$lng]?></label><input type="text" value="<?=$username?>" name="username"/>
     <mark id="usernameInvalid">Please enter a username!</mark>
     <mark id="usernameExists">Sorry, this username is already in use.</mark>
 </p>
 <p id="email">
-    <label class='form'><?=$dict["email"][$lng]?></label><input type="email" name="email"/>
+    <label class='form'><?=$dict["email"][$lng]?></label><input type="email" value="<?=$email?>" name="email"/>
     <mark>Please enter a valid email!</mark>
 </p>
 <p id="pw1">

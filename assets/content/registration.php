@@ -19,7 +19,7 @@ if($createUser) {
 
 <h1><?=$dict["you"][$lng]?></h1>
 <?php if($createUser && !$successful_registration)
-    echo "<p class='wrongComb'>".$dict['badRegistration'][$lng]."</p>"
+    echo "<p>$input_error</p>"
 ?>
 <form action="<?="index.php?id=registration&lng=$lng&createUser=true";?>" method="post">
 
