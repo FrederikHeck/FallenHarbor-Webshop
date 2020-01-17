@@ -322,3 +322,18 @@ input {
 .black {
     color: black;
 }
+
+li.anmerkungen {
+    text-align: left;
+    padding: 10px;
+    margin: 0px 25%;
+}
+
+ul.anmerkungen {
+    list-style-type: circle;
+}
+
+h2.anmerkungen {
+    text-align: left;
+    margin: 0px 24%;
+}

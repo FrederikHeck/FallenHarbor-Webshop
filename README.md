@@ -1,10 +1,7 @@
 To - Do:
 -----------
-* Registration: Server Validation
-* Semantische URLs
 * DB erneuern
-* (Style checkbox)
-* Push git, remarks word-seite, mail locher
+* Push git, mail locher
 -----------
 
 Validierung:
@@ -12,6 +9,7 @@ Validierung:
 teilweise sofortiges JS-Feedback
 
 Wichtige Features:
+* Semantische URLs
 * Mit htacess geschützten Musik-Download-Bereich
 * Backend implementieren
 * User-Site: Infos anzeigen & bearbeiten, Profil löschen
@@ -21,6 +19,7 @@ Wichtige Features:
 * Bestätigungs - Email nach Registrierung
 
 Anderes:
+* Style checkbox
 * Mail verbessern
 * Infos wie tracklist, zugelassene admin-accounts in xml auslagern
 
