@@ -3,7 +3,6 @@ To - Do:
 * Registration: Server Validation
 * Semantische URLs
 * DB erneuern
-* Mail: Produkte einfügen
 * (Style checkbox)
 * Push git, remarks word-seite, mail locher
 -----------

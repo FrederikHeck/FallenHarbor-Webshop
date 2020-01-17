@@ -3,9 +3,6 @@
 $successful_registration = false; #did the database entry creating work
 $usernameExists = false;
 
-//Should a user be created?
-$createUser = isset($_GET['createUser']) ? true : false;
-
 if ($createUser){
     #does the username exist?
     if(User::getUserByUsername($username) == null){

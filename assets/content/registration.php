@@ -1,14 +1,24 @@
+<script src="assets/js/validate_client_address.js"></script>
+<script src="assets/js/validate_client_account.js"></script>
+
 <?php
-require("assets/php/func/validation_handler_registration.php");
-require("assets/php/func/create_user.php");
-if ($successful_registration && !$usernameExists){
-    header("Location: index.php?id=validate_account&lng=$lng");
-    exit;
+//Should a user be created?
+$createUser = isset($_GET['createUser']) ? true : false;
+if($createUser) {
+    require("assets/php/func/validate_server_account.php");
+    if (isset($validationOkay) && $validationOkay) {
+        require("assets/php/func/create_user.php");
+        if ($successful_registration && !$usernameExists) {
+            header("Location: index.php?id=validate_account&lng=$lng");
+            exit;
+        }
+    }
+    else $successful_registration = false;
 }
 ?>
 
 <h1><?=$dict["you"][$lng]?></h1>
-<?php if(!$successful_registration && $createUser)
+<?php if($createUser && !$successful_registration)
     echo "<p class='wrongComb'>".$dict['badRegistration'][$lng]."</p>"
 ?>
 <form action="<?="index.php?id=registration&lng=$lng&createUser=true";?>" method="post">

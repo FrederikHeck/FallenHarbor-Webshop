@@ -1,4 +1,4 @@
-<?php require("assets/php/func/validate_server.php") ?>
+<?php require("assets/php/func/validate_server_address.php") ?>
 <script src="assets/js/validate_client_address.js"></script>
 
 
