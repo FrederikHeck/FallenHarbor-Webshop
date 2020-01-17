@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = test_input($_POST["email"]);
     $input_error = check_empty($input_error, "email",  $dict, $lng);
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $input_error = $dict["input_error"][$lng];
+        $input_error = $dict["input_error"][$lng] . "(Bad email)";
     }
 
     $username = test_input($_POST["username"]);
@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $input_error = check_empty($input_error, "pw2",  $dict, $lng);
 
     if($pw1 != $pw2)
-        $input_error = $dict["input_error"][$lng];
+        $input_error = $dict["input_error"][$lng] . "(Passwords don't match)";
 
     $validationOkay = true;
     if ($input_error != ""){
@@ -59,7 +59,7 @@ function test_input($data) {
 function check_empty($input_error, $data, $dict, $lng) {
 
     if (empty($_POST[$data])) {
-        $input_error = $dict["input_error"][$lng];
+        $input_error = $dict["input_error"][$lng] . "(Missing fields)";
     }
 
     return $input_error;
